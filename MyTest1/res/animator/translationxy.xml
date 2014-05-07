@@ -1,0 +1,28 @@
+<!--?xml version=1.0 encoding=utf-8?-->
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="together">
+    <objectanimator 
+        android:valueTo="200" 
+        android:valueFrom="0" 
+        android:repeatMode="reverse" 
+        android:repeatCount="1" 
+        android:propertyName="translationX" 
+        android:duration="2000">
+    </objectanimator>
+    <objectanimator 
+        android:valueTo="200" 
+        android:valueFrom="0" 
+        android:repeatMode="reverse" 
+        android:repeatCount="1" 
+        android:propertyName="translationY" 
+        android:duration="2000">
+    </objectanimator>
+    <objectanimator 
+        android:valueTo="1.0" 
+        android:valueFrom="0" 
+        android:repeatMode="reverse" 
+        android:repeatCount="1" 
+        android:propertyName="alpha" 
+        android:duration="2000">
+    </objectanimator>
+</set>
+

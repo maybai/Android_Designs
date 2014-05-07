@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+         android:id="@+id/item1" 
+         android:orderInCategory="1" 
+         android:textColor="#FFF"
+         android:showAsAction="ifRoom|withText" 
+         android:title="Toast"/> 
+  
+     <item 
+         android:id="@+id/item2" 
+         android:orderInCategory="2"
+         android:textColor="#FFF"
+         android:showAsAction="ifRoom|withText" 
+         android:title="MyToast"/> 
+  
+     <item 
+         android:id="@+id/item3" 
+         android:orderInCategory="3" 
+         android:showAsAction="ifRoom|withText" 
+         android:title="Animation"/> 
+  
+     <item 
+         android:id="@+id/item4" 
+         android:orderInCategory="4" 
+         android:showAsAction="ifRoom|withText" 
+         android:title="help"/>
+     <item 
+         android:id="@+id/search" 
+         android:actionViewClass="android.widget.SearchView" 
+         android:showAsAction="ifRoom" 
+         android:title="Search"/> 
+         
+     <item android:id="@+id/menu_share"  
+          android:title="share"  
+          android:showAsAction="ifRoom"  
+          android:actionProviderClass="android.widget.ShareActionProvider" />  
+     
+
+</menu>

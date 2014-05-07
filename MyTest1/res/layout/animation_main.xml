@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <Button  
+            android:id="@+id/bt_x"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="x" />  
+        <Button  
+            android:id="@+id/bt_y"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="y" />  
+  
+          
+        <Button  
+            android:id="@+id/bt_xy"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="xy" />  
+          
+        <Button  
+            android:id="@+id/bt_vpa"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="ViewPropAnimator" />
+        <Button  
+            android:id="@+id/bt_alpha"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="透明" />  
+  
+        <Button  
+            android:id="@+id/bt_scaleX"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="scaleX" />  
+  
+        <Button  
+            android:id="@+id/bt_scaleY"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="scaleY" />  
+  
+        <Button  
+            android:id="@+id/bt_scaleXY"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="scaleXY" />  
+  
+        <Button  
+            android:id="@+id/bt_translationX"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="translationX" />  
+  
+        <Button  
+            android:id="@+id/bt_translationY"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="translationY" />  
+  
+        <Button  
+            android:id="@+id/bt_translationXY"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="translationXY" />  
+  
+        <Button  
+            android:id="@+id/bt_rotationX"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="rotationX" />  
+  
+        <Button  
+            android:id="@+id/bt_rotationY"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="rotationY" />  
+          
+        <Button  
+            android:id="@+id/bt_rotation"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="rotation" />  
+          
+        
+        
+    </LinearLayout>
+    
+
+</ScrollView>
