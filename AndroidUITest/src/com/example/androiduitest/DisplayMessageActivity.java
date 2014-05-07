@@ -16,19 +16,18 @@ public class DisplayMessageActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_display_message);
+		// Get the message from the intent
+	    Intent intent = getIntent();
+	    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
-		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
-		
-		Intent intent = getIntent();
-		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-		//Create the textview
-		TextView textView = new TextView(this);
-		textView.setTextSize(40);
-		textView.setText(message);
+	    // Create the text view
+	    TextView textView = new TextView(this);
+	    textView.setTextSize(40);
+	    textView.setText(message);
+
+	    // Set the text view as the activity layout
+	    setContentView(textView);
+
 	}
 
 	@Override
