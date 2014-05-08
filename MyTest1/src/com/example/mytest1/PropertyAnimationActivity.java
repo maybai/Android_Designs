@@ -36,6 +36,8 @@ public class PropertyAnimationActivity extends Activity implements OnClickListen
 	private Button bt_y;  
 	private Button bt_xy;
 	
+	//private ScrollView sv;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -63,6 +65,15 @@ public class PropertyAnimationActivity extends Activity implements OnClickListen
           
         //ViewPropAnimator  
         bt_vpa = (Button) findViewById(R.id.bt_vpa);
+        /*
+        sv = (ScrollView)findViewById(R.id.sc_animtion);
+        sv.post(new Runnable() {  
+    	     @Override  
+    	     public void run() {  
+    	         sv.scrollTo(0, 1000);  
+    	     }   
+        });  
+*/
 
         bt_alpha.setOnClickListener(this);  
 	         

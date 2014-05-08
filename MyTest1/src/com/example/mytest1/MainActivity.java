@@ -155,6 +155,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		    case R.id.item3:
 		    	Intent intent2 = new Intent(this, PropertyAnimationActivity.class);
 		    	startActivity(intent2);
+		    case R.id.item4:
+		    	Intent intent3 = new Intent(this, MusicPlayer.class);
+		    	startActivity(intent3);
 		    default: 
 		        return super.onOptionsItemSelected(item); 
 		    } 
