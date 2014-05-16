@@ -30,12 +30,20 @@ public class MainActivity extends Activity {
      * 
      */
     public void sendMessage(View v){
+    	sendOrderedBroadcast();
     	Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText editText = (EditText)findViewById(R.id.edit_message);
     	String message = editText.getText().toString();
     	intent.putExtra(EXTRA_MESSAGE, message);
-    	startActivity(intent);
+    	startActivity(intent);    	
     }
+    
+    public void sendOrderedBroadcast(){
+		Intent intent = new Intent ("android.intent.action.MY_BROADCAST");
+		intent.putExtra("msg", "My Message");
+		//sendOrderedBroadcast(intent, null);
+		sendOrderedBroadcast(intent, null); //send ordered broadcast
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
