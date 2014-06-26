@@ -49,6 +49,9 @@ public class MusicPlayer extends Activity implements OnClickListener{
 		}
 	}
 	
+	public void pausePlayMusic(){
+	}
+	
 	@Override
 	protected void onStop(){
 		Log.v(TAG, "Activity stop Service");

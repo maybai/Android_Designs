@@ -26,8 +26,8 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int ab_background=0x7f020000;
@@ -36,53 +36,67 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int action_compse=0x7f090014;
-        public static final int action_search=0x7f090013;
-        public static final int action_settings=0x7f090015;
-        public static final int bt_alpha=0x7f090006;
-        public static final int bt_rotation=0x7f09000f;
-        public static final int bt_rotationX=0x7f09000d;
-        public static final int bt_rotationY=0x7f09000e;
-        public static final int bt_scaleX=0x7f090007;
-        public static final int bt_scaleXY=0x7f090009;
-        public static final int bt_scaleY=0x7f090008;
-        public static final int bt_translationX=0x7f09000a;
-        public static final int bt_translationXY=0x7f09000c;
-        public static final int bt_translationY=0x7f09000b;
-        public static final int bt_vpa=0x7f090005;
-        public static final int bt_x=0x7f090002;
-        public static final int bt_xy=0x7f090004;
-        public static final int bt_y=0x7f090003;
-        public static final int hideBt=0x7f090000;
-        public static final int item1=0x7f090016;
-        public static final int item2=0x7f090017;
-        public static final int item3=0x7f090018;
-        public static final int item4=0x7f090019;
-        public static final int menu_share=0x7f09001b;
-        public static final int search=0x7f09001a;
-        public static final int section_label=0x7f090010;
-        public static final int showBt=0x7f090001;
-        public static final int text=0x7f090012;
-        public static final int toast_layout_root=0x7f090011;
+        public static final int action_compse=0x7f0a0018;
+        public static final int action_search=0x7f0a0017;
+        public static final int action_settings=0x7f0a0019;
+        public static final int bt_alpha=0x7f0a0007;
+        public static final int bt_rotation=0x7f0a0010;
+        public static final int bt_rotationX=0x7f0a000e;
+        public static final int bt_rotationY=0x7f0a000f;
+        public static final int bt_scaleX=0x7f0a0008;
+        public static final int bt_scaleXY=0x7f0a000a;
+        public static final int bt_scaleY=0x7f0a0009;
+        public static final int bt_translationX=0x7f0a000b;
+        public static final int bt_translationXY=0x7f0a000d;
+        public static final int bt_translationY=0x7f0a000c;
+        public static final int bt_vpa=0x7f0a0006;
+        public static final int bt_x=0x7f0a0003;
+        public static final int bt_xy=0x7f0a0005;
+        public static final int bt_y=0x7f0a0004;
+        public static final int hideBt=0x7f0a0000;
+        public static final int item1=0x7f0a001a;
+        public static final int item2=0x7f0a001b;
+        public static final int item3=0x7f0a001c;
+        public static final int item4=0x7f0a001d;
+        public static final int menu_share=0x7f0a001f;
+        public static final int pause=0x7f0a0013;
+        public static final int play=0x7f0a0012;
+        public static final int sc_animtion=0x7f0a0002;
+        public static final int search=0x7f0a001e;
+        public static final int section_label=0x7f0a0011;
+        public static final int showBt=0x7f0a0001;
+        public static final int stop=0x7f0a0014;
+        public static final int text=0x7f0a0016;
+        public static final int toast_layout_root=0x7f0a0015;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int animation_main=0x7f030001;
         public static final int fragment_main=0x7f030002;
-        public static final int toast_layout=0x7f030003;
+        public static final int music_player_main=0x7f030003;
+        public static final int toast_layout=0x7f030004;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
-        public static final int main_activity_actions=0x7f080001;
+        public static final int main=0x7f090000;
+        public static final int main_activity_actions=0x7f090001;
+    }
+    public static final class raw {
+        public static final int baihu=0x7f050000;
+        public static final int hongyan=0x7f050001;
+        public static final int huanlesong=0x7f050002;
+        public static final int sctt=0x7f050003;
+        public static final int wozhizaihuni=0x7f050004;
+        public static final int yhyl_lin=0x7f050005;
+        public static final int yhyl_zhou=0x7f050006;
     }
     public static final class string {
-        public static final int action_compose=0x7f060006;
-        public static final int action_search=0x7f060005;
-        public static final int action_settings=0x7f060004;
-        public static final int app_name=0x7f060000;
-        public static final int title_section1=0x7f060001;
-        public static final int title_section2=0x7f060002;
-        public static final int title_section3=0x7f060003;
+        public static final int action_compose=0x7f070006;
+        public static final int action_search=0x7f070005;
+        public static final int action_settings=0x7f070004;
+        public static final int app_name=0x7f070000;
+        public static final int title_section1=0x7f070001;
+        public static final int title_section2=0x7f070002;
+        public static final int title_section3=0x7f070003;
     }
     public static final class style {
         /** 
@@ -106,17 +120,17 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070004;
+        public static final int AppTheme=0x7f080004;
         /**  other activity and action bar styles here 
          */
-        public static final int CustomActivityTheme=0x7f070001;
-        public static final int CustomTabTextStyle=0x7f070003;
+        public static final int CustomActivityTheme=0x7f080001;
+        public static final int CustomTabTextStyle=0x7f080003;
         /**  style for the action bar backgrounds 
          */
-        public static final int MyActionBar=0x7f070002;
+        public static final int MyActionBar=0x7f080002;
     }
 }

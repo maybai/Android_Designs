@@ -1,5 +1,7 @@
 package com.example.mytest1;
 
+import java.io.IOException;
+
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -10,7 +12,7 @@ import android.widget.Toast;
 
 public class PlayService extends Service {
 	String TAG = "ServiceActivity";
-	MediaPlayer mediaPlayer;
+	MediaPlayer mediaPlayer = null;
 	
 	/**
      * Class for clients to access.  Because we know this service always
@@ -40,11 +42,16 @@ public class PlayService extends Service {
 	     * 要用MediaPlayer来创建，不能用MediaPlayer的对象来创建 // 不用带后缀 mediaPlayer = new
 	     * MediaPlayer(); mediaPlayer.create(this, R.raw.test);
 	     */
-	
-	    /*
-	     * try { mediaPlayer.setDataSource("/sdcard/music/lost times.mp3");
-	     * mediaPlayer.prepare();
-	     * 
+	    /* 
+	    
+	     try { 
+	    	 mediaPlayer.setDataSource("./res/raw/baihu.mp3");
+	    	 mediaPlayer.prepare();
+	     }catch(IOException ioe){
+	    	 Log.e(TAG, "player  prepare() err"); 
+	     }
+	     
+	     
 	     * 
 	     * //方法二，从网上的链接获取歌曲 try { mediaPlayer.setDataSource(
 	     * "http://www.yousss.com/uploadfile/mp3/2007-11/20071129134414713.mp3"
@@ -65,6 +72,32 @@ public class PlayService extends Service {
 		Log.v(TAG, "ServiceonStart");
 		mediaPlayer.start();
 		return START_STICKY;
+	}
+	
+	public Boolean isPlaying(){
+		//1.正在播放       
+		  //使其暂停播放，并通知界面将Button的值改为"播放"(如果正在播放，Button值是"暂停")        
+		  if(mediaPlayer != null && mediaPlayer.isPlaying())
+		   {            
+		      mediaPlayer.pause();
+		      return false;
+		   }        
+		 //2.正在暂停       
+		  else
+		  {            
+		      if(mediaPlayer == null)
+		       {                
+		           mediaPlayer = new MediaPlayer();//如果被停止了，则为null                
+		           try { 
+		               mediaPlayer.reset();
+		               mediaPlayer.setDataSource("./res/raw/baihu.mp3");
+		               mediaPlayer.prepare();
+		             } catch (Exception e)
+		                  {  Log.e("player", "player  prepare() err");   }               
+		      }
+		    mediaPlayer.start();
+		    return true;
+		 }
 	}
 	@Override
 	public void onDestroy(){
