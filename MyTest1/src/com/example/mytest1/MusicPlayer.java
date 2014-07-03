@@ -23,7 +23,7 @@ public class MusicPlayer extends Activity implements OnClickListener{
 		bt_play.setOnClickListener(this);
 		bt_pause.setOnClickListener(this);
 		bt_stop .setOnClickListener(this);
-		this.startService(new Intent(this, PlayService.class));
+		//this.startService(new Intent(this, PlayService.class));
 	}
 	
 	@Override
@@ -40,6 +40,9 @@ public class MusicPlayer extends Activity implements OnClickListener{
 			this.startService(new Intent(this,PlayService.class));
 			break;
 		case(R.id.pause):
+			Intent mPause = new Intent();
+			mPause.putExtra("pauseMusic", true);
+			
 			break;
 		case(R.id.stop):
 			this.stopService(new Intent(this, PlayService.class));

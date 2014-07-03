@@ -2,6 +2,9 @@ package com.example.androiduitest;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +17,9 @@ import android.widget.EditText;
 public class MainActivity extends Activity {
 
 	public final static String EXTRA_MESSAGE = "com.example.androiduitest.MESSAGE";
+	private NotificationManager notificationManager;  
+    private PendingIntent pendingIntent;  
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +37,34 @@ public class MainActivity extends Activity {
      */
     public void sendMessage(View v){
     	sendOrderedBroadcast();
-    	Intent intent = new Intent(this, DisplayMessageActivity.class);
+    	
+    	notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);  
+        Intent intent = new Intent(this, DisplayMessageActivity.class);  
+        pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);  
+
+    	//Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText editText = (EditText)findViewById(R.id.edit_message);
     	String message = editText.getText().toString();
     	intent.putExtra(EXTRA_MESSAGE, message);
+    	
+    	Notification notification = new Notification();  
+        notification.icon = R.drawable.ic_launcher;  
+        notification.tickerText = "下载任务已添加到下载列表中,点击查看!";
+        notification.when = System.currentTimeMillis(); //通知产生的时间，会在通知信息里显示
+        notification.defaults = Notification.DEFAULT_SOUND;
+        long[] vibrate = {0, 100, 200, 300};
+        notification.vibrate = vibrate;
+        //notification.setLatestEventInfo(this, "下载任务已启动", "下载任务已添加到下载列表中!", pendingIntent);  
+        notificationManager.notify(0, notification);  
+
+    	
+    	Intent intent2 = new Intent ("android.intent.action.MY_BROADCAST");
+		intent2.putExtra("msg", message);
+		sendOrderedBroadcast(intent2, null); //send ordered broadcast
+		
+		
+		
+    	
     	startActivity(intent);    	
     }
     
