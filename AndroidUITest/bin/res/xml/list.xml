@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="ListPreference">        
+                 <ListPreference 
+                         android:key="list_0"
+                     android:title="登录设置A" 
+                     android:dialogTitle="选择在线时间"
+                        android:entryValues="@array/auto_logout_time_value" >
+                </ListPreference>
+        
+                 <ListPreference 
+                         android:key="list_0"
+                     android:title="登录设置A" 
+                     android:dialogTitle="选择在线时间"
+                        android:entryValues="@array/auto_logout_time_value" >
+                </ListPreference>
+        </PreferenceCategory>
+</PreferenceScreen>
