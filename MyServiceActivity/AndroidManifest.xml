@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myserviceactivity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    
+	<permission android:name="com.example.myserviceactivity.MY_BROADCAST_PERMISSION"/>
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.myserviceactivity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.provider.MyContentDemo" >
+
+        </activity>
+        
+        <provider android:name="com.example.provider.MyContentProvider" 
+            android:authorities="com.example.provider.MyContentProvider"
+            android:permission="com.example.provider.My_CONTENTPROVIDER_PERMISSION" />
+        
+		<service android:enabled="true" android:name="com.example.myserviceactivity.ServiceTest1"/>
+		
+		<!-- My test for BroadcastReceiver -->
+		<activity android:name="com.example.broadcasttest.MessageActivity" 	android:theme="@style/MyDialogStyle">
+			<intent-filter>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<receiver android:name="com.example.broadcasttest.FirstReceiver"
+		    android:permission="com.example.myserviceactivity.MY_BROADCAST_PERMISSION">
+			<intent-filter android:priority="1000">
+				<action android:name="android.intent.action.MY_BROADCAST"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</receiver>
+		
+		<receiver android:name="com.example.broadcasttest.SecondReceiver"
+		    	android:permission="com.example.myserviceactivity.MY_BROADCAST_PERMISSION">
+			<intent-filter android:priority="999">
+				<action android:name="android.intent.action.MY_BROADCAST"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</receiver>
+		
+		<receiver android:name="com.example.broadcasttest.ThirdReceiver"
+		    android:permission="com.example.myserviceactivity.MY_BROADCAST_PERMISSION">
+			<intent-filter android:priority="998">
+				<action android:name="android.intent.action.MY_BROADCAST"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>			
+		</receiver>
+		<service android:enabled="true" android:name="com.example.broadcasttest.MyService"/>
+      </application>
+</manifest>
